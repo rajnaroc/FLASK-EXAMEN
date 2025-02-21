@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block title %}Register{% endblock %}
+{% block body %}
+    <div>
+        <h1>Register</h1>
+        <form action="/register" method="POST">
+            <div>
+                {{ form.fullname.label }}
+                {{ form.fullname }}
+            </div>
+            <div>
+                {{ form.password.label }}
+                {{ form.password }}
+            </div>
+            <div>
+                {{ form.email.label }}
+                {{ form.email }}
+            </div>
+            <div>
+                {{ form.enviar }}
+            </div>
+        </form>
+    </div>
+{% endblock %}

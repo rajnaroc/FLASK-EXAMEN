@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block title %}Login{% endblock %}
+{% block body %}
+    <div>
+        <h1>Login</h1>
+        <form action="/login" method="POST">
+            <div>
+                {{ form.email.label }}
+                {{ form.email }}
+            </div>
+            <div>
+                {{ form.password.label }}
+                {{ form.password }}
+            </div>
+            <div>
+                {{ form.enviar }}
+            </div>
+        </form>
+    </div>
+{% endblock %}

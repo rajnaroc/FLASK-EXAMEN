@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block title %}contacts{% endblock %}
+{% block header %}
+<header>
+    <a href="{{ url_for("contacts")}}">home</a>
+    <a href="{{ url_for("login")}}">login</a>
+    <a href="{{ url_for("register")}}">register</a>
+</header>
+{% endblock %}
+{% block body %}
+    <div>
+        <h1>Contactos</h1>
+        <h1>Bienvenido</h1>
+        <a href="/addcontacts">añadir</a>
+    </div>
+{% endblock %}
