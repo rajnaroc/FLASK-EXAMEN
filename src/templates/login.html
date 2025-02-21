@@ -15,6 +15,7 @@
             <div>
                 {{ form.enviar }}
             </div>
+            {{ form.csrf_token() }}
         </form>
     </div>
 {% endblock %}
