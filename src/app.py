@@ -1,6 +1,6 @@
 from flask import Flask,render_template,redirect,url_for,request
 from flask_mysqldb import MySQL
-from flask_login import login_manager, LoginManager,login_user,current_user
+from flask_login import LoginManager,login_user,login_required
 # importaciones de los .py
 from config import config
 from forms import registerForm,loginform,contactsForm
@@ -58,7 +58,9 @@ def register():
         else:
             return render_template("register.html", form=form)
 
+
 @app.route("/contacts", methods=["GET", "POST"])
+@login_required
 def contacts():
     form = contactsForm()
     if request.method == "GET":
@@ -67,11 +69,18 @@ def contacts():
         pass
 
 @app.route("/addcontacts", methods=["GET","POST"])
+@login_required
 def addcontacts():
     if request.method == "GET":
         return render_template("")
     if request.method == "POST":
         pass
+
+@app.route("/logout")
+def logout():
+    logout()
+    return redirect(url_for("inicio"))
+
 
 def status_401(error):
     return redirect(url_for("inicio"))

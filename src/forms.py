@@ -39,7 +39,7 @@ class contactsForm(FlaskForm):
     img = StringField("img", validators=[
         DataRequired()
     ])
-    descripcion =StringField("descripcion", validators=[
+    descripcion = StringField("descripcion", validators=[
         DataRequired()
     ])
     enviar = SubmitField("agregar")

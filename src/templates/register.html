@@ -6,15 +6,15 @@
         <form action="/register" method="POST">
             <div>
                 {{ form.fullname.label }}
-                {{ form.fullname }}
+                {{ form.fullname(placeholder="fullname") }}
             </div>
             <div>
                 {{ form.password.label }}
-                {{ form.password }}
+                {{ form.password(placeholder="password") }}
             </div>
             <div>
                 {{ form.email.label }}
-                {{ form.email }}
+                {{ form.email((placeholder="email")) }}
             </div>
             <div>
                 {{ form.enviar }}
